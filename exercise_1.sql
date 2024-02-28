@@ -234,3 +234,41 @@ INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_i
 INSERT INTO dependents(dependent_id,first_name,last_name,relationship,employee_id) VALUES (30,'Sandra','Taylor','Child',176);
 
 select * from dependents;
+
+
+#EXERCISE 2
+#QUERY 1
+select country_name from countries;
+#QUERY 2
+select email,phone_number from employees;
+#QUERY 3
+select * from employees where last_name like 'Fay';
+#QUERY 4
+select hire_date from employees where last_name like 'Grant' or 'Whalen';
+#QUERY 5
+#USING SUB QUERY
+select * from employees where job_id=(select job_id from jobs where job_title="shipping clerk");
+#USING JOIN
+select employees.first_name,jobs.job_id from employees inner join jobs on employees.job_id=jobs.job_id where job_title="shipping clerk";
+#QUERY 6
+select * from employees where department_id="8";
+#QUERY 7
+select * from dept order by department_name desc;
+#QUERY 8
+select * from employees where last_name like 'k%';
+#QUERY 9
+select * from employees where year(hire_date) between 1995 and 1997;
+#QUERY 10
+select job_title from jobs where max_salary<10000;
+#QUERY 11
+select lower(email) from employees;
+select upper(email) from employees;
+#QUERY 12
+select concat(first_name," ",last_name) as employee_name from employees where year(hire_date)=1995;
+#QUERY 13
+INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES(207,'Paul','Newton','paul.gietz@sqltutorial.org','511.123.8181','1994-06-07',1,8300.00,205,11);
+#QUERY 14
+set sql_safe_updates=0;
+delete from dept where department_name="shipping";
+#QUERY 15
+select * from employees where dayname(hire_date)="Tuesday";
