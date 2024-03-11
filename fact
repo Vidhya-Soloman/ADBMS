@@ -1,0 +1,13 @@
+#IN AND OUT PARAMETERS
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `fact`(in num int)
+BEGIN
+declare f int default 1; #INITIALIZING VARIABLES
+while num > 0
+do
+set f=f*num;
+set num=num-1;
+end while;
+select f;
+END

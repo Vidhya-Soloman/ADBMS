@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `student`()
+BEGIN
+select * from student;
+END
+
+#student table
