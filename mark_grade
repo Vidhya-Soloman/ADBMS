@@ -1,0 +1,14 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `mark`(in marks int)
+BEGIN
+declare result varchar(50);
+if marks > 90 then
+set result="Grade A";
+elseif marks >80 then
+set result="Grade B";
+elseif marks >70 then
+set result="Grade C";
+else
+set result="Grade D";
+end if;
+select result;
+END

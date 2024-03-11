@@ -12,3 +12,9 @@ call oddeven(5);
 call number(-2);
 call number(3);
 call number(0);
+
+call day("2024/03/11"); #MONDAY 0
+call day("2024/03/12"); #TUESDAY 1
+
+call mark(89);
+call mark(60);
