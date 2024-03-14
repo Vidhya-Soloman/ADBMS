@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `number`(in num int)
+BEGIN
+declare res varchar(50);
+if num > 0 then
+set res="Positive Number";
+elseif num < 0 then
+set res="Negative Number";
+else
+set res="Zero";
+end if;
+select res;
+END
