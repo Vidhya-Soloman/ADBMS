@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertion`(in barcode varchar(50),in pname varchar(50),in price int,in quantity int)
+BEGIN
+declare f varchar(50);
+if Price>0 AND Quantity >=0 then
+insert into product(PdtId,PName,Price,Quantity) values(barcode,pname,price,quantity);
+else set f="Not Inserted";
+select f;
+end if;
+END
